@@ -5,8 +5,9 @@ class Shape {
 public:
     virtual double area() const = 0;
     virtual double perimeter() const = 0;
-    virtual void draw() const = 0;
+    virtual double volume() const { return 0; }  
+    virtual void plot() const = 0;  
     virtual ~Shape() {}  
 };
 
-#endif 
+#endif

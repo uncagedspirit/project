@@ -4,12 +4,12 @@ using namespace std;
 //display file
 //functional file
 
-int main(){
+// int main(){
 
-    do(){
+//     do(){
         
-    }
-    while()
+//     }
+//     while()
 
-    return 0;
-}
+//     return 0;
+// }

@@ -29,12 +29,16 @@ void Rectangle::plot() const {
     file.close();
 
     // Use gnuplot to visualize the rectangle with dynamic axis range
-    std::string command = "gnuplot -persist -e \"set xrange [-1:" + to_string(max(width, height) + 1) + "]; set yrange [-1:" + to_string(max(width, height) + 1) + "]; plot 'rectangle.dat' with lines\"";
+    std::string command = "gnuplot -persist -e \""
+    "set xrange [-1:" + to_string(max(width, height) + 1) + "]; "
+    "set yrange [-1:" + to_string(max(width, height) + 1) + "]; "
+    "set xzeroaxis; set yzeroaxis; " 
+    "plot 'rectangle.dat' using 1:2 with lines\"";
 
     system(command.c_str());
 }
 
 
-
+ 
 
 

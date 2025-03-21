@@ -11,10 +11,9 @@ public:
     Rectangle(double width, double height);
 
     double area() const override;
-
     double perimeter() const override;
 
-    void draw() const override;
+    void plot() const;  
 };
 
 #endif
