@@ -1,12 +1,24 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-//line is made up of 2 points connected, so first we need two points then a line can be created
+class Line {
+public:
+    Point start, end;
 
-class Line{
-    //constructors
+    // Constructor
+    Line(Point a, Point b) {
+        start = a;
+        end = b;
+    }
 
-    Line(Point a, Point b){
-        
+
+    void plotLine() {
+        ofstream file("line.dat");
+        file << start.onXAxis << " " << start.onYAxis << "\n";
+        file << end.onXAxis << " " << end.onYAxis << "\n";
+        file.close();
+        system("gnuplot -e \"plot 'line.dat' with lines\" -p");
     }
 };
+
+
